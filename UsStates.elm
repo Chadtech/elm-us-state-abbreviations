@@ -237,11 +237,11 @@ toState abbreviation =
 
 {-| Get the states abbreviation from its name
 
-    UsState.toState "Arizona" == Just AZ     -- True
-    UsState.toState "Arizona   " == Just AZ  -- True
-    UsState.toState "arizona" == Just AZ     -- True
+    UsState.fromState "Arizona" == Just AZ     -- True
+    UsState.fromState "Arizona   " == Just AZ  -- True
+    UsState.fromState "arizona" == Just AZ     -- True
 
-    UsState.toState "puerto rico" == Nothing -- True
+    UsState.fromState "puerto rico" == Nothing -- True
 
 -}
 fromState : String -> Maybe Abbreviation
