@@ -1,7 +1,7 @@
 module UsStates
     exposing
-        ( toState
-        , fromState
+        ( toString
+        , fromString
         , Abbreviation(..)
         , all
         )
@@ -9,17 +9,12 @@ module UsStates
 {-| Here are the abbreviations for every US State, as a union type, and two functions to convert to state names as strings.
 @docs Abbreviation
 @docs all
-@docs toState
-@docs fromState
+@docs toString
+@docs fromString
 -}
 
 
 {-| Every US State abbreviation.
-
-    import UsState exposing (Abbreviation(..))
-
-    toString AZ == "AZ"  -- True
-
 -}
 type Abbreviation
     = AL
@@ -136,11 +131,11 @@ all =
 
 {-| Get the states name from the abbreviation
 
-    UsState.toState AZ == "arizona" -- True
+    UsState.toString AZ == "arizona" -- True
 
 -}
-toState : Abbreviation -> String
-toState abbreviation =
+toString : Abbreviation -> String
+toString abbreviation =
     case abbreviation of
         AL ->
             "alabama"
@@ -298,15 +293,15 @@ toState abbreviation =
 
 {-| Get the states abbreviation from its name
 
-    UsState.fromState "Arizona" == Just AZ     -- True
-    UsState.fromState "Arizona   " == Just AZ  -- True
-    UsState.fromState "arizona" == Just AZ     -- True
+    UsState.fromString "Arizona" == Just AZ     -- True
+    UsState.fromString "Arizona   " == Just AZ  -- True
+    UsState.fromString "arizona" == Just AZ     -- True
 
-    UsState.fromState "puerto rico" == Nothing -- True
+    UsState.fromString "puerto rico" == Nothing -- True
 
 -}
-fromState : String -> Maybe Abbreviation
-fromState str =
+fromString : String -> Maybe Abbreviation
+fromString str =
     case String.trim <| String.toLower str of
         "alabama" ->
             Just AL
