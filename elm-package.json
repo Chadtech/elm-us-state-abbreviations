@@ -1,5 +1,5 @@
 {
-    "version": "2.0.0",
+    "version": "2.0.1",
     "summary": "List of US State abbreviations and a few helpful functions",
     "repository": "https://github.com/Chadtech/elm-us-state-abbreviations.git",
     "license": "BSD3",
