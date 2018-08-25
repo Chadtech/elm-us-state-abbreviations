@@ -3,7 +3,7 @@
     "name": "Chadtech/elm-us-state-abbreviations",
     "summary": "List of US State abbreviations and a few helpful functions",
     "license": "BSD-3-Clause",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "exposed-modules": [
         "UsStates"
     ],
