@@ -1,16 +1,17 @@
-module UsStates
-    exposing
-        ( toString
-        , fromString
-        , Abbreviation(..)
-        , all
-        )
+module UsStates exposing
+    ( Abbreviation(..)
+    , all
+    , toString
+    , fromString
+    )
 
 {-| Here are the abbreviations for every US State, as a union type, and two functions to convert to state names as strings.
+
 @docs Abbreviation
 @docs all
 @docs toString
 @docs fromString
+
 -}
 
 
@@ -73,7 +74,7 @@ type Abbreviation
 {-| All the abbreviations as a list
 -}
 all : List Abbreviation
-all = 
+all =
     [ AL
     , AK
     , AZ
@@ -126,7 +127,6 @@ all =
     , WI
     , WY
     ]
-
 
 
 {-| Get the states name from the abbreviation
@@ -293,9 +293,11 @@ toString abbreviation =
 
 {-| Get the states abbreviation from its name
 
-    UsState.fromString "Arizona" == Just AZ     -- True
-    UsState.fromString "Arizona   " == Just AZ  -- True
-    UsState.fromString "arizona" == Just AZ     -- True
+    UsState.fromString "Arizona" == Just AZ -- True
+
+    UsState.fromString "Arizona   " == Just AZ -- True
+
+    UsState.fromString "arizona" == Just AZ -- True
 
     UsState.fromString "puerto rico" == Nothing -- True
 

@@ -3,7 +3,7 @@
 A simple Elm package for US State abbreviations.
 
 
-``` Elm
+```elm
 import UsStates exposing (Abbreviation(..))
 
 UsStates.fromString : String -> Maybe Abbreviation

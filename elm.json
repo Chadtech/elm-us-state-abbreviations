@@ -1,0 +1,15 @@
+{
+    "type": "package",
+    "name": "Chadtech/elm-us-state-abbreviations",
+    "summary": "List of US State abbreviations and a few helpful functions",
+    "license": "BSD-3-Clause",
+    "version": "2.0.1",
+    "exposed-modules": [
+        "UsStates"
+    ],
+    "elm-version": "0.19.0 <= v < 0.20.0",
+    "dependencies": {
+        "elm/core": "1.0.0 <= v < 2.0.0"
+    },
+    "test-dependencies": {}
+}
